@@ -81,7 +81,7 @@ def load_model():
     Load trained KMeans model
     """
     try:
-        model = joblib.load("model/kmeans_model.pkl")
+        model = joblib.load("k_means/model/kmeans_model.pkl")
         return model
     except Exception as e:
         st.error(f"Model loading error: {e}")
@@ -97,7 +97,7 @@ def load_data():
     Load original Mall Customers dataset
     """
     try:
-        df = pd.read_csv("data/Mall_Customers (3).csv")
+        df = pd.read_csv("k_means/data/Mall_Customers (3).csv")
         return df
     except Exception as e:
         st.error(f"Dataset loading error: {e}")
@@ -109,7 +109,7 @@ def load_clustered_data():
     Load clustered dataset
     """
     try:
-        clustered_df = pd.read_csv("data/clustered_mall_customers.csv")
+        clustered_df = pd.read_csv("k_means/data/clustered_mall_customers.csv")
         return clustered_df
     except Exception:
         return None
@@ -359,3 +359,4 @@ st.markdown("""
 🛍️ Mall Customer Clustering | K-Means Unsupervised Learning Project
 </div>
 """, unsafe_allow_html=True)
+
