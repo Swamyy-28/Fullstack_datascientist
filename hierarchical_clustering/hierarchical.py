@@ -69,15 +69,15 @@ h1, h2, h3 {
 
 @st.cache_data
 def load_original_data():
-    return pd.read_csv("Mall_Customers (3).csv")
+    return pd.read_csv("hierarchical_clustering/Mall_Customers (3).csv")
 
 @st.cache_data
 def load_clustered_data():
-    return pd.read_csv("Mall_customer_clustered.csv")
+    return pd.read_csv("hierarchical_clustering/Mall_customer_clustered.csv")
 
 @st.cache_resource
 def load_model():
-    return joblib.load("hierarchical_model.pkl")
+    return joblib.load("hierarchical_clustering/hierarchical_model.pkl")
 
 # ==============================================================
 # LOAD DATA
